@@ -1,0 +1,85 @@
+.tudo * {
+    margin: 10px;
+    text-align: center;
+}
+
+.menu * {
+    text-decoration: none;
+    display: flex;
+}
+
+.menu a {
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    height: 30px;
+    width: 100px;
+    align-items: center;
+}
+
+.procurar {
+    border: 1px solid red;
+    height: 20px;
+    width: 400px;
+}
+
+.topo {
+    border: 1px solid red;
+    height: 120px;
+    width: 1000;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid red;
+    margin-left: 30px;
+}
+
+.central {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.rolarParaEsquerda {
+    left: 0;
+    height: 500px;
+    width: 20px;
+    color: #ffffff00;
+}
+
+.rolarParaDireita {
+    height: 500px;
+    width: 20px;
+    right: 0;
+    background-color: #ffffff00;
+}
+
+.vitrine {
+    margin: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 15px;
+    overflow-x: auto;
+    width: 90%;
+    scrollbar-width: none;
+}
+
+.card {
+    width: 300px;
+    height: 500px;
+    background-color: rgba(170, 161, 161, 0.232);
+    border-radius: 10px;
+    min-width: 300px;
+    min-height: 500px;
+}
+
+.card:hover {
+    background-color: rgba(66, 65, 65, 0.232);
+    min-height: 505px;
+    transition: 0.3ms;
+}
