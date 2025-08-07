@@ -1,13 +1,22 @@
-.tudo * {
-    margin: 10px;
+body {
+    margin: 0;
+}
+
+.logo img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }
 
 .menu * {
     text-decoration: none;
     display: flex;
+    margin: 10px;
 }
 
 .menu a {
+    left: 0;
     background-color: blue;
     color: white;
     border-radius: 10px;
@@ -15,17 +24,36 @@
     width: 100px;
     align-items: center;
     justify-content: center;
-    object-fit: contain;
 }
 
 .menu a:hover {
     background-color: rgba(0, 0, 255, 0.464);
+    transition: 0.3s;
 }
 
 .procurar {
-    border: 1px solid blue;
-    height: 20px;
-    width: 400px;
+    height: 40px;
+    width: 500px;
+}
+
+.procurar input {
+    justify-items: center;
+    object-fit: fill;
+    width: 87%;
+    height: 100%;
+    border: solid 1px blue;
+    border-radius: 3px;
+}
+
+.procurar button {
+    border: none;
+    background-color: white;
+}
+
+.procurar button:hover {
+    background-color: oklab(74.04899999999999% 0.03089 -0.11176 / 0.848);
+    border-radius: 50%;
+    transition: 0.3s;
 }
 
 .topo {
@@ -35,6 +63,7 @@
     border-radius: 20px;
     display: flex;
     align-items: center;
+    gap: 10px;
 }
 
 .logo {
@@ -46,6 +75,7 @@
 }
 
 .central {
+    margin-top: 50px;
     display: flex;
     flex-wrap: nowrap;
 }
@@ -68,7 +98,7 @@
     margin: auto;
     display: flex;
     flex-wrap: nowrap;
-    gap: 15px;
+    gap: 20px;
     overflow-x: auto;
     width: 90%;
     scrollbar-width: none;
@@ -84,7 +114,49 @@
 }
 
 .card:hover {
-    background-color: rgba(66, 65, 65, 0.232);
-    min-height: 505px;
-    transition: 0.3ms;
+    border-left: 1px solid blue;
+    border-right: 1px solid blue;
+    transition: 0.3s;
+}
+
+.img-product {
+    top: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    height: 50%;
+}
+
+.img-product img {
+    object-fit: fill;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.information-product {
+    text-align: center;
+    bottom: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 100%;
+    height: 30%;
+}
+
+.buttons-product {
+    text-align: center;
+}
+
+.buttons-product button {
+    background-color: blue;
+    border-radius: 5px;
+    height: 30px;
+    border: none;
+    color: white;
+}
+
+.buttons-product button:hover {
+    transition: 0.3s;
+    background-color: rgba(0, 0, 255, 0.464);
 }
