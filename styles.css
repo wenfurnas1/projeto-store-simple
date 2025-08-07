@@ -30,6 +30,11 @@ body * {
     background-color: rgba(0, 0, 255, 0.464);
 }
 
+.menu ul {
+    gap: 10px; /* Espaço entre os itens */
+    padding: 5;
+}
+.men
 .procurar {
     height: 40px;
     width: 500px;
