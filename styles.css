@@ -30,6 +30,11 @@ body * {
     background-color: rgba(0, 0, 255, 0.464);
 }
 
+.menu ul {
+    gap: 10px; /* Espaço entre os itens */
+    padding: 5;
+}
+.men
 .procurar {
     height: 40px;
     width: 500px;
@@ -76,6 +81,7 @@ body * {
     margin-top: 50px;
     display: flex;
     flex-wrap: nowrap;
+    align-items: center; /* Alinha verticalmente os filhos no centro */
 }
 
 .rolar {
@@ -190,4 +196,10 @@ body * {
     display: none;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+}
+
+.btn-small {
+    height: 100px;
+    background-color: gray;
+    border-radius: 4px;
 }
