@@ -9,16 +9,25 @@
 }
 
 .menu a {
-    background-color: red;
-    color: white;
+    background-color: rgb(37, 6, 212);
+    color: rgb(248, 245, 245);
     border-radius: 10px;
     height: 30px;
     width: 100px;
     align-items: center;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold; /* ← negrito */
+    font-family: sans-serif;
 }
 
+.menu ul {
+    gap: 10px; /* Espaço entre os itens */
+    padding: 5;
+}
+.men
 .procurar {
-    border: 1px solid red;
+    border: 1px solid rgb(0, 0, 0);
     height: 20px;
     width: 400px;
 }
@@ -43,6 +52,7 @@
 .central {
     display: flex;
     flex-wrap: nowrap;
+    align-items: center; /* Alinha verticalmente os filhos no centro */
 }
 
 .rolarParaEsquerda {
@@ -82,4 +92,10 @@
     background-color: rgba(66, 65, 65, 0.232);
     min-height: 505px;
     transition: 0.3ms;
+}
+
+.btn-small {
+    height: 100px;
+    background-color: gray;
+    border-radius: 4px;
 }
