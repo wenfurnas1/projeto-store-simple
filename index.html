@@ -49,12 +49,15 @@
                 <button id="carro" style="border-radius: 50%; width: 50px; height: 50px;
                      border-color: blue;">
     <img src="https://img.icons8.com/?size=100&id=Pk83zuj25r01&format=png&color=000000" alt="Carrinho"></button>
-                <div id="carrinhoflutuante" class="carrinhoflutuante">
-
+                <div class="valores">
+                    <div id="carrinhoflutuante" class="carrinhoflutuante">
+                    </div>
+                    <div id="valortotal" class="valortotal"></div>
                 </div>
             </div>
 
         </div>
+
         <div class="central">
             <button class="rolar" onclick="rolarParaEsquerda()">⬅️</button>
 
@@ -64,9 +67,9 @@
                         <img src="data:image/jpeg;base64,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WtTRMeLPa1wPBwBHoVi+J9GmGTXLqVrSeMZMZ/AQivODob7/AH6/FcCmbxAPll97SCt21nQrSH+VUVMfdma9v4m396hKvoUqB/KrWnufDr6goNXtp7f/AE/8nrtEfe/ykt8QVmtV0TYq32X08n9Tm/5VFVOwOLs30of9h7T8XBNGPBp4GQHj2muvu+r+7Lkuk4Z/w3/wq+nwHEWe1QzeTS7/AA3VmYqu9vkc3nG8f5UDrH/Qk+8z/QuwSO/6JJ+tLp+ANVHVVn/5ZB4h36KtlJXHdTHzBQUmJzjrG0DuklP/ALLKttORuyt72tAd9+2b3q4hwPEnboLf0n8ypOi6P8Ul3gtHp8EEI+nYDmebnm43XfSxB5sD6BZ9g/QzISDPJ481sHA+j2jp7ENzEcSnRB9GmF9WzsxZM3tPPtO8Ty7hotkRtsFxFE1os0ADuVaRCCIioIiICIiAiIgIiICIiAiIgIiIC4suUQU5QuCwKtEHUYRyRsDRwC7UQUdWOQ9E6pv0R6KtEFIYOQ9FVZEQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREH/9k="
                             alt=""></div>
                     <div class="information-product">
-                        <h2 class="nome-product">titulo</h2>
+                        <h2 class="nome-product">sapato</h2>
                         <p>informações</p>
-                        <div class="price">50,00</div>
+                        <div class="price">43,50</div>
                     </div>
                     <div class="buttons-product">
                         <button class="ver"> ver produto</button>
@@ -78,9 +81,9 @@
                     <div class="img-product">
                         <img src="https://shopee.com.br/blog/wp-content/uploads/2022/03/tipos-de-sapato-masculino.png" alt=""></div>
                     <div class="information-product">
-                        <h2 class="nome-product">titulo</h2>
+                        <h2 class="nome-product">sapato</h2>
                         <p>informações</p>
-                        <div class="price">50,00</div>
+                        <div class="price">50.00</div>
                     </div>
                     <div class="buttons-product">
                         <button class="ver"> ver produto</button>
@@ -92,9 +95,9 @@
                     <div class="img-product">
                         <img src="https://a-static.mlcdn.com.br/1500x1500/calcas-cargo-masculina-jeans-larga-bolso-lateral-volgue/volguemodas/f6aeaa6c4c0211eeb8b94201ac185056/08c42712e0745bd7cdf90175a214d25d.jpeg" alt=""></div>
                     <div class="information-product">
-                        <h2 class="nome-product">titulo</h2>
+                        <h2 class="nome-product">calça</h2>
                         <p>informações</p>
-                        <div class="price">50,00</div>
+                        <div class="price">50.00</div>
                     </div>
                     <div class="buttons-product">
                         <button class="ver"> ver produto</button>
@@ -106,9 +109,9 @@
                     <div class="img-product">
                         <img src="https://http2.mlstatic.com/D_NQ_NP_895582-MLB47020900138_082021-O-kit-3-calcas-jeans-masculina-modelo-slim-envio-imediato.webp" alt=""></div>
                     <div class="information-product">
-                        <h2 class="nome-product">titulo</h2>
+                        <h2 class="nome-product">calça</h2>
                         <p>informações</p>
-                        <div class="price">50,00</div>
+                        <div class="price">75.00</div>
                     </div>
                     <div class="buttons-product">
                         <button class="ver"> ver produto</button>
@@ -122,7 +125,7 @@
                     <div class="information-product">
                         <h2 class="nome-product">titulo</h2>
                         <p>informações</p>
-                        <div class="price">50,00</div>
+                        <div class="price">50.00</div>
                     </div>
                     <div class="buttons-product">
                         <button class="ver"> ver produto</button>
@@ -136,7 +139,7 @@
                     <div class="information-product">
                         <h2 class="nome-product">titulo</h2>
                         <p>informações</p>
-                        <div class="price">50,00</div>
+                        <div class="price">50.00</div>
                     </div>
                     <div class="buttons-product">
                         <button class="ver"> ver produto</button>
@@ -151,7 +154,7 @@
                     <div class="information-product">
                         <h2 class="nome-product">titulo</h2>
                         <p>informações</p>
-                        <div class="price">50,00</div>
+                        <div class="price">50.00</div>
                     </div>
                     <div class="buttons-product">
                         <button class="ver"> ver produto</button>
@@ -166,7 +169,7 @@
                     <div class="information-product">
                         <h2 class="nome-product">titulo</h2>
                         <p>informações</p>
-                        <div class="price">50,00</div>
+                        <div class="price">50.00</div>
                     </div>
                     <div class="buttons-product">
                         <button class="ver"> ver produto</button>
@@ -181,7 +184,7 @@
                     <div class="information-product">
                         <h2 class="nome-product">titulo</h2>
                         <p>informações</p>
-                        <div class="price">50,00</div>
+                        <div class="price">50.00</div>
                     </div>
                     <div class="buttons-product">
                         <button class="ver"> ver produto</button>
@@ -196,7 +199,7 @@
                     <div class="information-product">
                         <h2 class="nome-product">titulo</h2>
                         <p>informações</p>
-                        <div class="price">50,00</div>
+                        <div class="price">50.00</div>
                     </div>
                     <div class="buttons-product">
                         <button class="ver"> ver produto</button>
@@ -211,7 +214,7 @@
                     <div class="information-product">
                         <h2 class="nome-product">ss</h2>
                         <p>informações</p>
-                        <div class="price">50,00</div>
+                        <div class="price">50.00</div>
                     </div>
                     <div class="buttons-product">
                         <button class="ver"> ver produto</button>
@@ -226,7 +229,7 @@
                     <div class="information-product">
                         <h2 class="nome-product">titulo</h2>
                         <p>informações</p>
-                        <div class="price">50,00</div>
+                        <div class="price">50.00</div>
                     </div>
                     <div class="buttons-product">
                         <button class="ver"> ver produto</button>

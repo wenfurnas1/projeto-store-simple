@@ -12,11 +12,11 @@ const carro = document.querySelector("#carro");
 const carrinhoflutuante = document.querySelector("#carrinhoflutuante");
 
 carro.addEventListener('click', function() {
-    if (carrinhoflutuante.style.display === "none" || carrinhoflutuante.style.display === "") {
-        carrinhoflutuante.style.display = "block";
-    } else {
+    if (carrinhoflutuante.style.display === "block" || carrinhoflutuante.style.display === "") {
         carrinhoflutuante.style.display = "none";
-    }
+    } else
+        carrinhoflutuante.style.display = "block";
+
 });
 window.addEventListener("DOMContentLoaded", () => {
 
@@ -31,7 +31,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     const botoesCarrinho = document.querySelectorAll('.carrinho');
     const flutuant = document.querySelector('#carrinhoflutuante');
-
+    const valortotal = document.querySelector("#valortotal");
     botoesCarrinho.forEach(function(botao) {
         botao.addEventListener('click', function() {
             const card = botao.closest('.card');
@@ -54,19 +54,18 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 
-
             flutuant.innerHTML = vetorCarrinho.map(produto => `
-                <p>${produto.nome} - R$${produto.preco}
-                <strong>Valor Total: R$${somador.toFixed(2)}</strong>
-                
-                </p>
+                <p>${produto.nome} -  R$${produto.preco}</p><div>
             `).join('');
+
+
+            valortotal.innerText = `total = ` + somador;
+
         });
 
 
 
     });
-    let valortotal = flutuant;
 
 
 
