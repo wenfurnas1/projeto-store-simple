@@ -1,5 +1,7 @@
 body * {
     margin: 0;
+    box-sizing: border-box;
+    max-height: 1000px;
 }
 
 .logo img {
@@ -31,116 +33,108 @@ body * {
 }
 
 .procurar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
     height: 40px;
-    width: 500px;
+    max-width: 500px;
+    width: 100%;
 }
 
 .procurar input {
-    justify-items: center;
-    object-fit: fill;
-    width: 87%;
-    height: 50%;
+    flex: 1;
+    height: 100%;
     border: solid 1px blue;
     border-radius: 3px;
+    padding: 5px;
 }
 
 .procurar button {
     border: none;
     background-color: white;
+    cursor: pointer;
 }
 
 .procurar button:hover {
-    background-color: oklab(74.04899999999999% 0.03089 -0.11176 / 0.848);
+    background-color: oklab(74.049% 0.03089 -0.11176 / 0.848);
     border-radius: 50%;
     transition: 0.3s;
 }
 
 .topo {
     border-bottom: 1px solid blue;
-    height: 120px;
-    width: 1000;
+    padding: 10px;
     border-radius: 20px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 10px;
+    justify-content: space-between;
 }
 
 .logo {
-    width: 100px;
-    height: 100px;
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    margin-left: 30px;
 }
 
 .central {
     margin-top: 50px;
     display: flex;
     flex-wrap: nowrap;
-}
-
-.rolar {
-    border: 1px solid blue;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 0 10px;
 }
 
 .vitrine {
-    margin: auto;
     display: flex;
     flex-wrap: nowrap;
     gap: 20px;
     overflow-x: auto;
-    width: 90%;
+    width: 100%;
     scrollbar-width: none;
 }
 
-.central button-onclick {
-    background-color: blue;
-}
-
 .card {
+    flex: 0 0 auto;
     width: 300px;
-    height: 500px;
     background-color: rgba(170, 161, 161, 0.232);
     border-radius: 10px;
-    min-width: 300px;
-    min-height: 500px;
     border-left: 1px solid white;
     border-right: 1px solid white;
-    transition: 0, 3 ease;
+    transition: 0.3s ease;
 }
 
 .card:hover {
-    transition: 0.3s;
     transform: translateY(-10px);
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
 }
 
 .img-product {
-    top: 0;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
     width: 100%;
     height: 50%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .img-product img {
-    object-fit: fill;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    object-fit: cover;
     width: 100%;
     height: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .information-product {
     text-align: center;
-    bottom: 0;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    width: 100%;
-    height: 30%;
+    padding: 10px;
 }
 
 .buttons-product {
     text-align: center;
+    padding: 10px;
 }
 
 .buttons-product button {
@@ -149,16 +143,12 @@ body * {
     height: 30px;
     border: none;
     color: white;
+    cursor: pointer;
 }
 
 .buttons-product button:hover {
-    transition: 0.3s;
     background-color: rgba(0, 0, 255, 0.464);
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
-}
-
-.topo * {
-    justify-items: center;
 }
 
 .carro img {
@@ -173,13 +163,73 @@ body * {
 }
 
 .carrinhoflutuante {
-    width: 100px;
-    margin-top: 130px;
+    width: 130px;
+    margin-top: 135px;
     position: fixed;
     background-color: blue;
     top: 2px;
+    right: 10px;
     display: none;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     color: white;
+}
+
+@media (max-width: 768px) {
+    .topo {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .procurar {
+        max-width: 90%;
+    }
+    .card {
+        width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+    .card {
+        width: 200px;
+    }
+    .menu a {
+        width: auto;
+        padding: 0 10px;
+    }
+}
+
+.notification {
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+}
+
+.notification button {
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: none;
+    background-color: blue;
+}
+
+.notification img {
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: none;
 }

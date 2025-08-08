@@ -27,7 +27,7 @@ window.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-
+    const notification = document.querySelector("#notification")
     const vetorCarrinho = [];
 
     const botoesCarrinho = document.querySelectorAll('.carrinho');
@@ -41,6 +41,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
             const item = new ItemCarrinho(nomeProduto, precoProduto);
             vetorCarrinho.push(item);
+            notification.style.display = block;
             flutuant.innerHTML = vetorCarrinho.map(produto => `
                 <p>${produto.nome} - ${produto.preco}</p>
             `).join('');
